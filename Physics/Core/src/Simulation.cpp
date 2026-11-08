@@ -2,9 +2,48 @@
 #include <print>
 
 namespace Core {
-Simulation::Simulation() {}
+Simulation::Simulation() {
+	m_drones.reserve(10000);
+	m_missiles.reserve(10000);
+}
 
 void Simulation::Init() {
 	std::println("[Core] Physics Engine Initialized successfully.");
+}
+
+void Simulation::SpawnDrone(float x, float y, float vx, float vy) {
+	m_drones.push_back({
+		.id = m_nextEntityId++,
+		.position = {x, y},
+		.velocity = {vx, vy},
+		.health = 100.0f,
+		.isActive = true
+	});
+}
+
+void Simulation::SpawnMissile(float x, float y, uint32_t targetId) {
+	m_missiles.push_back({
+		.id = m_nextEntityId++,
+		.position = {x, y},
+		.velocity = {0.0f, 0.0f},
+		.targetId = targetId,
+		.isActive = true
+	});
+}
+
+void Simulation::Update(float dt) {
+	for (auto& drone : m_drones) {
+		if (!drone.isActive) continue;
+
+		drone.position.x += drone.velocity.x * dt;
+		drone.position.y += drone.velocity.y * dt;
+	}
+
+	for (auto& missile : m_missiles) {
+		if (!missile.isActive) continue;
+
+		missile.position.x += missile.velocity.x * dt;
+		missile.position.y += missile.velocity.y * dt;
+	}
 }
 }
