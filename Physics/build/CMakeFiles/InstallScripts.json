@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/dorvarsulker/dor/personal/axiom/Physics/build/cmake_install.cmake",
+		"/home/dorvarsulker/dor/personal/axiom/Physics/build/Core/cmake_install.cmake",
+		"/home/dorvarsulker/dor/personal/axiom/Physics/build/Graphics/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,8 @@
+/home/dorvarsulker/dor/personal/axiom/Physics/build/CMakeFiles/edit_cache.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/CMakeFiles/rebuild_cache.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/Core/CMakeFiles/Core.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/Core/CMakeFiles/edit_cache.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/Core/CMakeFiles/rebuild_cache.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/Graphics/CMakeFiles/SimulationApp.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/Graphics/CMakeFiles/edit_cache.dir
+/home/dorvarsulker/dor/personal/axiom/Physics/build/Graphics/CMakeFiles/rebuild_cache.dir

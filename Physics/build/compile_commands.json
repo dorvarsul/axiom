@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/dorvarsulker/dor/personal/axiom/Physics/build/Core",
+  "command": "/usr/lib64/ccache/c++  -I/home/dorvarsulker/dor/personal/axiom/Physics/Core/include -I/home/dorvarsulker/dor/personal/axiom/Physics/Core/src -std=c++23 -o CMakeFiles/Core.dir/src/Simulation.cpp.o -c /home/dorvarsulker/dor/personal/axiom/Physics/Core/src/Simulation.cpp",
+  "file": "/home/dorvarsulker/dor/personal/axiom/Physics/Core/src/Simulation.cpp",
+  "output": "Core/CMakeFiles/Core.dir/src/Simulation.cpp.o"
+},
+{
+  "directory": "/home/dorvarsulker/dor/personal/axiom/Physics/build/Graphics",
+  "command": "/usr/lib64/ccache/c++  -I/home/dorvarsulker/dor/personal/axiom/Physics/Core/include -std=c++23 -o CMakeFiles/SimulationApp.dir/src/main.cpp.o -c /home/dorvarsulker/dor/personal/axiom/Physics/Graphics/src/main.cpp",
+  "file": "/home/dorvarsulker/dor/personal/axiom/Physics/Graphics/src/main.cpp",
+  "output": "Graphics/CMakeFiles/SimulationApp.dir/src/main.cpp.o"
+}
+]
