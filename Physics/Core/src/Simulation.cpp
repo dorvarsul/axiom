@@ -31,6 +31,35 @@ void Simulation::SpawnMissile(float x, float y, uint32_t targetId) {
 	});
 }
 
+void Simulation::DestroyDrone(uint32_t id) {
+	for (auto& drone : m_drones) {
+		if (drone.id == id) {
+			drone.isActive = false;
+			break;
+		}
+	}
+}
+
+void Simulation::CleanupDestroyedEntities() {
+	for (size_t i = 0; i < m_drones.size();) {
+		if (!m_drones[i].isActive) {
+			m_drones[i] = m_drones.back();
+			m_drones.pop_back();
+		} else {
+			++i;
+		}
+	}
+
+	for (size_t i = 0; i < m_missiles.size(); ) {
+		if (!m_missiles[i].isActive) {
+			m_missiles[i] = m_missiles.back();
+			m_missiles.pop_back();
+		} else{
+			++i;
+		}
+	}
+}
+
 void Simulation::Update(float dt) {
 	for (auto& drone : m_drones) {
 		if (!drone.isActive) continue;
@@ -45,5 +74,7 @@ void Simulation::Update(float dt) {
 		missile.position.x += missile.velocity.x * dt;
 		missile.position.y += missile.velocity.y * dt;
 	}
+
+	CleanupDestroyedEntities();
 }
 }

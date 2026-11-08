@@ -39,6 +39,8 @@ public:
 
 	void SpawnDrone(float x, float y, float vx, float vy);
 	void SpawnMissile(float x, float y, uint32_t targetId);
+	void DestroyDrone(uint32_t id);
+	void CleanupDestroyedEntities();
 
 	const std::vector<Drone>& GetDrones() const { return m_drones; }
 	const std::vector<Missile>& GetMissiles() const { return m_missiles; }
