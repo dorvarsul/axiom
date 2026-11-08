@@ -1,2 +1,0 @@
-/usr/bin/ar qc libCore.a CMakeFiles/Core.dir/src/Simulation.cpp.o
-/usr/bin/ranlib libCore.a
